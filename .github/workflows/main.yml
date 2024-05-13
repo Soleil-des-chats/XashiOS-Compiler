@@ -1,0 +1,21 @@
+name: Compile Project
+
+on:
+  push:
+    branches:
+      - main  # adjust as needed
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run scripts
+      run: |
+        chmod +x scripts/*
+        scripts/fetch-projects.sh
+        scripts/fill-project.sh
+        scripts/run-xcodebuild.sh iphoneos arm64 output.ipa
