@@ -10,7 +10,7 @@ Run `scripts/fill-project.sh` once before build
 
 Remove all except dummy.c from empty before committing changes to xcode project (you need it to fill project again after engine update
 
-Use `scripts/run-xcodebuild.sh iphoneos armv7 output.ipa` to build engine with prebuilt game libraries
+Use `scripts/run-xcodebuild.sh iphoneos arm64 output.ipa` to build engine with prebuilt game libraries
 
 ### Default game libraries should be named:
 
