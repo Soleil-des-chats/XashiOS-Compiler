@@ -1,5 +1,7 @@
 # XashiOS project
 
+Mean to work with [XashiOS](https://github.com/Soleil-des-chats/Xash3D-iOS) 
+
 You need osx with xcode installed to build it
 
 Use `scripts/fetch-projects.sh` to fetch engine with dependencies
