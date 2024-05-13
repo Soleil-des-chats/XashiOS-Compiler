@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # adjust as needed
+  release:
+    types: [created]
 
 jobs:
   build:
