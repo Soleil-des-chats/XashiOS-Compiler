@@ -1,0 +1,3 @@
+scripts/fetch-projects.sh
+scripts/fill-project.sh
+scripts/run-xcodebuild.sh iphoneos arm64 output.ipa
