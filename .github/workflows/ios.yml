@@ -3,10 +3,10 @@ name: Compile Project
 on:
   push:
     branches:
-      - main  # adjust as needed
+      - main  # ajustez au besoin
   release:
     types: [created]
-  workflow_dispatch: # Put here!!
+  workflow_dispatch:
 
 jobs:
   build:
@@ -22,3 +22,9 @@ jobs:
         scripts/fetch-projects.sh
         scripts/fill-project.sh
         scripts/run-xcodebuild.sh iphoneos arm64 output.ipa
+
+    - name: Upload IPA artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: output
+        path: output.ipa
